@@ -1,97 +1,68 @@
-<%@ page language="java" contentType="text/html" import="com.model.Category"%>
-<%@ taglib uri ="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri ="http://www.springframework.org/tags/form" prefix="form" %>
-
-<html lang="en-US">
-<head>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
- </head>
-<title>Category</title>
-
-
+<%@ page language="java" contentType="text/html" import="com.model.Category" isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>Insert title here</title>
+	</head>
 <body>
-<c:url var="addAction" value="saveCategory"></c:url>
 
-	<form:form action="${addAction}" modelAttribute="category" id="btn-add"  method="POST">
-		<h3>
-			<c:if test="$(category.id==0}">
-		       Add New Item
-	            </c:if>
-			<c:if test="${!empty category.id}">
-		      Update Category for Id: <c:out value="${category.id}" />
-				 <form:hidden path="id"/> 
-			</c:if>
-			</h3>
+		<!-- <form action="AddCategory" method="post">-->
 
-			<table >
-
-				<tr>
-					<c:if test="${category.id!=0}">
-						<td>Id:</td>
-						<td><form:input path="id" /></td>
-					</c:if>
-				<tr>
-					<td>Name:</td>
-					<td><form:input path="categoryName" /></td>
-				<tr>
-					<td>Description:</td>
-					<td><form:input path="categoryDescription" /></td>
-				<tr>
-				<td colspan="2"><c:if test="${category.id==0}">
-							<input type="submit" value="Add" id="btn-add">
-						</c:if> <c:if test="${category.id!=0}">
-							<input type="submit" value="Update" id="btn-update">
-						</c:if></td>
-				<tr>
-					<td colspan="2" class="success-msg"><c:out value="${msg}" /></td>
-			</table>
-			
-			</form:form>
-			
-
-   <div class="container">
-	<div class="row">
+		<form:form action="AddCategory" modelAttribute="category">
+		<table align="center" cellspacing="2">
+		<tr>
+			<td colspan="2">Category Module</td>
+		</tr>
 		
-        
-        <div class="col-md-12">
-       
-        <div class="table-responsive">
+		<tr>
+				<td>Category ID</td>
+				<!--<td><input type="text" name="catId"/></td>-->
+				<td><form:input path="catId"/></td>
+		</tr>
+	
+		<tr>
+			<td>Category Name</td>
+			<!-- <td><input type="text" name="catName"/></td> -->
+			<td><form:input path="catName"/></td>
+		</tr>
+	
+		<tr>
+			<td>Category Desc</td>
+			<!-- <td><input type="text" name="catDesc"/></td> -->
+			<td><form:input path="catDesc"/></td>
+		</tr>
+	
+		<tr>
+			<td colspan="2">
+				<center><input type="submit" value="Insert"/></center>
+			</td>
+		</tr>
+	</table>
+	</form:form>
 
-                
-              <table id="mytable" class="table table-bordred table-striped">
-        <thead>
-				<tr>
-					<th>ID</th>
-					<th>Name</th>
-					<th>Description</th>
-					
-					<th colspan="2">Action</th>
-				</tr>
-				<c:forEach var="obj" items="${categoryList}">
-					<tr>
-						<td><c:out value="${obj.id}" /></td>
-						<td><c:out value="${obj.categoryName}" /></td>
-						<td><c:out value="${obj.categoryDescription}" /></td>
-						
+<table cellspacing="2" align="center">
+	<tr bgcolor="gray">
+		<td>Category ID</td>
+		<td>Category Name</td>
+		<td>Category Description</td>
+		<td>Operation</td>
+	</tr>
+	
+	<c:forEach items="${categoryList}" var="category">
+		<tr bgcolor="cyan">
+			<td>${category.catId}</td>
+			<td>${category.catName}</td>
+			<td>${category.catDesc}</td>
+			<td>
+				<a href="<c:url value="deleteCategory/${category.catId}"/>">DELETE</a>/
+				<a href="<c:url value="updateCategory/${category.catId}"/>">UPDATE</a>
+			</td>
+		</tr>
+	</c:forEach>
 
-						 <td><a href="Deletecategory/${obj.id}" class="btn-default btn">Delete </a> |
-						  <a href="Updatecategory/${obj.id}" button type="button" class="btn btn-primary">Update</a></td> 
-							<!-- <button type="button" class="btn btn-primary">Primary</button> -->
-					</tr>
-					
-					
-				</c:forEach>
-				
-			</table>
-			</div>
-			</div>
-			</div>
-			</div>
-
-
-
-
-
+</table>
 </body>
 </html>

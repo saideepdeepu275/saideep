@@ -8,10 +8,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>cars v</title>
+<title>cars </title>
 </head>
 <body>
-<nav id="navbar-blue" class="navbar-inverse navbar-static-top" role="navigation" background-color="grey">
+<nav id="navbar-blue" class="navbar-inverse navbar-static-top" role="navigation" background-color="RED">
 <div class="container">
 		<ul class="nav navbar-nav">
 			<button type="button"class="nabar-toggle collapse" data-toggle="collapse" data-target="#bs-example-nav">
@@ -31,6 +31,9 @@
 		<li><a href="#">Product List</a></li>
 		<li><a href="#"><i class="fa fa-search" aria-hidden="true"></i>Search</a></li>
 		<li><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Cart</a></li>
+			<li><a href="category">category</a></li>
+				<li><a href="Product">Product</a></li>
+				<li><a href="Supplier">Supplier</a></li>
 	</ul>
 </div>
 </nav>

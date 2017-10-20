@@ -21,8 +21,10 @@ background-color:grey;
 </head>
 <jsp:include page="header.jsp"></jsp:include>
 <%--<%@include=file="header.jsp"%> --%>
+<jsp:include page="footer.jsp"></jsp:include>
 <body>
 <div class="Container">.
+<h2><Strong>Mostly Viewed</Strong></h2>
 <h2><Strong>Mostly Viewed</Strong></h2>
 <div id="mycarousel" class="carousel slide" data-ride="carousel">
 <!-- indicators -->
@@ -35,17 +37,17 @@ background-color:grey;
 
 <!-- wrapper for slides -->
 <div class="carousel-inner">
-  <div class="item active">
-      <img class="img-rounded" class="img-responsive center-block" src="acura-nsx-concept-at-beijing-motor-show01.jpg"style=" width="100%" height="30%"">
+  <div class="item active ">
+      <img class="img-rounded" class="img-responsive center-block" src="resources/acura-nsx-concept-at-beijing-motor-show01.jpg"style=" width="100%" height="30%"">
   </div>
    <div class="item">
-   <img class="img-rounded" class="img-responsive center-block" src="awesome-red-car-2.jpg" style="width="100%" height="30%"">
+   <img class="img-rounded" class="img-responsive center-block" src="resources/awesome-red-car-2.jpg" style="width="100%" height="30%"">
    </div>
    <div class="item">
-   <img class="img-rounded" class="img-responsive center-block"src="car1.jpg" style="width="100" height="30%"" >
+   <img class="img-rounded" class="img-responsive center-block"src="resources/car1.jpg" style="width="100%" height="30%"" >
    </div>
    <div class="item">
-   <img class="img-rounded" class="img-responsive center-block" src="images.jpg" style=" width="100%" height="30%"">
+   <img class="img-rounded" class="img-responsive center-block" src="resouces/images.jpg" style=" width="100%" height="30%"">
    </div>
 </div>
 <!-- Left and Right controls-->
@@ -57,6 +59,6 @@ background-color:grey;
   <span class="glyphicon glyphicon-chervon-right"></span>
   <span class="sr-only">Next</span>
 </a>
-<h2>list of products</h2>
+
 </div></div></body>
 </html>

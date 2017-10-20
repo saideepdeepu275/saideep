@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +20,7 @@ public class SupplierController {
      
      
     @RequestMapping(value="AddSupplier",method=RequestMethod.POST)
-    public String addSupplier(@RequestParam("supId") int supId,@RequestParam("supName") String supName,@RequestParam("supAddress") String supAddress,Model m)
+    public String addSupplier(@RequestParam("supId") int supId,@RequestParam("supName") String supName,@RequestParam("supAddress") String supAddress,BindingResult result,Model m)
     {
     	
         Supplier supplier=new Supplier();
@@ -32,22 +33,22 @@ public class SupplierController {
         List<Supplier> listSupplier=supplierDao.retrieveSupplier();
         m.addAttribute("supplierList",listSupplier);
          
-        return "Supplier";
+        return "redirect:/Supplier";
     }
      
     @RequestMapping(value="AddSupplier",method=RequestMethod.POST)
-    public String addSupplier(@ModelAttribute("supplier")Supplier supplier,Model m)
+    public String addSupplier(@ModelAttribute("supplier")Supplier supplier,BindingResult result,Model m)
     {
         supplierDao.addSupplier(supplier);
          
         List<Supplier> listSupplier=supplierDao.retrieveSupplier();
         m.addAttribute("supplierList",listSupplier);
          
-        return "Supplier";
+        return "redirect:/Supplier";
     }
      
     @RequestMapping(value="supplier",method=RequestMethod.GET)
-    public String showSupplier(Model m)
+    public String showSupplier(BindingResult result,Model m)
     {
         Supplier supplier=new Supplier();
         m.addAttribute(supplier);
@@ -65,7 +66,7 @@ public class SupplierController {
          
         List<Supplier> listSupplier=supplierDao.retrieveSupplier();
         m.addAttribute("supplierList",listSupplier);
-        return "Supplier";
+        return "redirect:/Supplier";
     }
      
     @RequestMapping(value="deleteSupplier/{supId}",method=RequestMethod.GET)
@@ -75,6 +76,6 @@ public class SupplierController {
         supplierDao.deleteSupplier(supplier);
         List<Supplier> listSupplier=supplierDao.retrieveSupplier();
         m.addAttribute("supplierList",listSupplier);
-        return "Supplier";
+        return "redirect:/Supplier";
     }
 }
