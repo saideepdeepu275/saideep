@@ -14,8 +14,7 @@ import com.model.User;
 @Controller
 public class indexController
 {
-	
-	
+		
 	@Autowired
 	private UserDao userDao;
 	
