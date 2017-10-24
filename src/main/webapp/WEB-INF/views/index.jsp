@@ -59,5 +59,6 @@ background-color:grey;
   <span class="sr-only">Next</span>
 </a>
 
-</div></div></body>
+</div>
+</body>
 </html>

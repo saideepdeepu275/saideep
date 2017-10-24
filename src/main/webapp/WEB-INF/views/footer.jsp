@@ -35,6 +35,8 @@
           <span class="glyphicon glyphicon-thumbs-up" style="color: black"></span>whatsapp
      
         </a>
+        </a>
+        </a>
       </p>
     </div>
     </div>
