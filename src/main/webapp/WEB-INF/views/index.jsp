@@ -46,9 +46,8 @@ background-color:grey;
    <div class="item">
    <img class="img-rounded" class="img-responsive center-block"src="resources/car1.jpg" style="width="100%" height="30%"" >
    </div>
-   <div class="item">
-   <img class="img-rounded" class="img-responsive center-block" src="resouces/images.jpg" style=" width="100%" height="30%"">
-   </div>
+  
+  </div>
 </div>
 <!-- Left and Right controls-->
 <a class="left carousel-control" href="#mycarousel"data-slide="prev">

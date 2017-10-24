@@ -36,6 +36,6 @@
 				<li><a href="Supplier">Supplier</a></li>
 	</ul>
 </div>
-</nav>
+</nav>s
 </body>
 </html>

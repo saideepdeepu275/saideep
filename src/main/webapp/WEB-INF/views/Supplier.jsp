@@ -42,42 +42,6 @@
 	</table>
 	</form:form>
 
-
-			
-
-<form:form action="${pageContext.request.contextPath}/editSupplier" modelAttribute="Supplier" method="post">
-			
-			<table align="center" cellspacing="2">
-			<tr>
-				<td colspan="2">Supplier Module</td>
-			</tr>
-			
-			<tr>
-					<td>Supplier ID</td>
-					<!--<td><input type="text" name="suppId"/></td>-->
-					<td><form:input path="suppId"/></td>
-			</tr>
-	
-			<tr>
-				<td>Supplier Name</td>
-				<!-- <td><input type="text" name="supprName"/></td> -->
-				<td><form:input path="suppName"/></td>
-			</tr>
-		
-			<tr>
-				<td>Supplier Address</td>
-				<!-- <td><input type="text" name="suppAddress"/></td> -->
-				<td><form:input path="suppAddress"/></td>
-			</tr>
-	
-		<tr>
-			<td colspan="2">
-				<center><input type="submit" value="Update"/></center>
-			</td>
-		</tr>
-	</table>
-	</form:form>
-
 <table cellspacing="2" align="center">
 	<tr bgcolor="gray">
 		<td>Supplier ID</td>

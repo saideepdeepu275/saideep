@@ -33,7 +33,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="F:/COURSES DONE/niit/H2/h2/bin/h2-1.4.195.jar">
+	<classpathentry exported="true" kind="lib" path="F:/COURSES DONE/niit/H2/h2/bin/h2-1.4.195.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>

@@ -50,8 +50,8 @@ public class SupplierController {
     @RequestMapping(value="supplier",method=RequestMethod.GET)
     public String showSupplier(BindingResult result,Model m)
     {
-        Supplier supplier=new Supplier();
-        m.addAttribute(supplier);
+      //  Supplier supplier=new Supplier();
+       // m.addAttribute(supplier);
          
         List<Supplier> listSupplier=supplierDao.retrieveSupplier();
         m.addAttribute("supplierList",listSupplier);
