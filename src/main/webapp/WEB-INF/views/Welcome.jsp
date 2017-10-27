@@ -27,14 +27,11 @@
     <ul class="nav navbar-nav">
 		<li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
 		<li><a href="registration">Register</a></li>
-		<li><a href="login"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a></li>
-		<li><a href="Search"><i class="fa fa-search" aria-hidden="true"></i>Search</a></li>
+		<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a></li>
+		<li><a href="#"><i class="fa fa-search" aria-hidden="true"></i>Search</a></li>
 		<li><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Cart</a></li>
-			<li><a href="category">Category</a></li>
-				<li><a href="product">Product</a></li>
-				<li><a href="supplier">Supplier</a></li>
 	</ul>
 </div>
-</nav>s
+</nav>
 </body>
 </html>

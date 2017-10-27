@@ -25,7 +25,7 @@ background-color:grey;
 <body>
 <div class="Container">.
 <h2><Strong>Mostly Viewed</Strong></h2>
-<h2><Strong>Mostly Viewed</Strong></h2>
+
 <div id="mycarousel" class="carousel slide" data-ride="carousel">
 <!-- indicators -->
 <ol class="carousel-indicators">

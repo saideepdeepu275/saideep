@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html" import="com.model.Category"%>
+<%@ page language="java" contentType="text/html" import="com.model.Supplier"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -7,31 +7,45 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>supplier</title>
 </head>
-	<body>
-			<!-- <form action="AddSupplier" method="post">-->
+	<body >
+
+	   	<!-- <form action="AddSupplier" method="post">-->
 
 			<form:form action="AddSupplier" modelAttribute="supplier">
+<center>
 			<table align="center" cellspacing="2">
+
+
+<tr>
+		
+		
+		<form:input type="hidden" name="supId" path="supId" class="form-control" />
+		
+		
+	</tr>
+
 			<tr>
 				<td colspan="2">Supplier Module</td>
 			</tr>
 			
-			<tr>
-					<td>Supplier ID</td>
-					<!--<td><input type="text" name="suppId"/></td>-->
-					<td><form:input path="suppId"/></td>
-			</tr>
+		
 	
 			<tr>
 				<td>Supplier Name</td>
-				<!-- <td><input type="text" name="supprName"/></td> -->
-				<td><form:input path="suppName"/></td>
+				<!-- <td><input type="text" name="supName"/></td> -->
+				<td><form:input path="supName"/></td>
 			</tr>
-		
+			
+			<tr>
+				<td>Supplier Desc</td>
+				<!-- <td><input type="text" name="SupDescription"/></td> -->
+				<td><form:input path="supDesc"/></td>
+			</tr>
+				
 			<tr>
 				<td>Supplier Address</td>
-				<!-- <td><input type="text" name="suppAddress"/></td> -->
-				<td><form:input path="suppAddress"/></td>
+				<!-- <td><input type="text" name="SupAddress"/></td> -->
+				<td><form:input path="supAddress"/></td>
 			</tr>
 	
 		<tr>
@@ -39,32 +53,36 @@
 				<center><input type="submit" value="Insert"/></center>
 			</td>
 		</tr>
+
 	</table>
+</center>
 	</form:form>
 
 <table cellspacing="2" align="center">
-	<tr bgcolor="gray">
+	<tr bgcolor="violet">
 		<td>Supplier ID</td>
 		<td>Supplier Name</td>
+		<td>Supplier Description</td>
 		<td>Supplier Address</td>
 		<td>Operation</td>
 	</tr>
 	
 	<c:forEach items="${supplierList}" var="supplier">
-		<tr bgcolor="cyan">
-			<td>${supplier.suppId}</td>
-			<td>${supplier.suppName}</td>
-			<td>${supplier.suppAddress}</td>
+		<tr bgcolor="blue">
+			<td>${supplier.supId}</td>
+			<td>${supplier.supName}</td>
+			<td>${supplier.supDesc}</td>
+			<td>${supplier.supAddress}</td>
 			<td>
 			
-				<a href="<c:url value="deleteSupplier/${supplier.suppId}"/>">DELETE</a>/
-				<a href="<c:url value="updateSupplier/${supplier.suppId}"/>">UPDATE</a>
+				<a href="<c:url value="deleteSupplier/${supplier.supId}"/>">DELETE</a>
+				<a href="<c:url value="updateSupplier/${supplier.supId}"/>">UPDATE</a>
 			</td>
 		</tr>
 	</c:forEach>
 
 </table>
 		
-
-</body>
+	
+			</body>
 </html>

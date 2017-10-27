@@ -18,11 +18,10 @@ public class indexController
 	@Autowired
 	private UserDao userDao;
 	
-	
 @RequestMapping("/")
 public String index()
 {
-	return "index";
+	return "Welcome";
 }
 
 
@@ -44,7 +43,7 @@ public String createUser(@ModelAttribute("user") User user)
 	user.setRole("ROLE_USER");
 	user.setEnabled(true);
 	userDao.saveUser(user);
-	return "index";
+	return "Welcome";
 }
 
 

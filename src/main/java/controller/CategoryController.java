@@ -20,8 +20,10 @@ import com.model.Category;
 	@Controller
 	public class CategoryController 
 	{
+		@Autowired
 	    CategoryDao categoryDao;
 	  
+	
 	    @RequestMapping(value="AddCategory",method=RequestMethod.POST)
 	    public String addCategory(@ModelAttribute("category")Category category,BindingResult result,Model m)
 	    {
@@ -53,7 +55,9 @@ import com.model.Category;
 	        //m.addAttribute(category);
 	         
 	        List<Category> listCategory=categoryDao.retrieveCategory();
+	        
 	        m.addAttribute("categoryList",listCategory);
+	       
 	        return "Category";
 	    }
 	     

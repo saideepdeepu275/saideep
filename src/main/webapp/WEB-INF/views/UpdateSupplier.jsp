@@ -17,19 +17,19 @@
 			<tr>
 					<td>Supplier ID</td>
 					<!--<td><input type="text" name="suppId"/></td>-->
-					<td><form:input path="suppId"/></td>
+					<td><form:input path="supId"/></td>
 			</tr>
 	
 			<tr>
 				<td>Supplier Name</td>
 				<!-- <td><input type="text" name="supprName"/></td> -->
-				<td><form:input path="suppName"/></td>
+				<td><form:input path="supName"/></td>
 			</tr>
 		
 			<tr>
 				<td>Supplier Address</td>
 				<!-- <td><input type="text" name="suppAddress"/></td> -->
-				<td><form:input path="suppAddress"/></td>
+				<td><form:input path="supAddress"/></td>
 			</tr>
 	
 		<tr>
