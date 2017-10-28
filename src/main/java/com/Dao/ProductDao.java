@@ -14,4 +14,5 @@ public interface ProductDao
 	public Product getProduct(int productId);
 	public boolean updateProduct(Product product);
 	public boolean addProduct(Product product);
+	public Product getItem(int id);
 }

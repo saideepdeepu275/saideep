@@ -1,44 +1,51 @@
 package com.model;
 
+
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
+
 
 @Entity
-@Table
+
 public class Supplier 
 {
 	@Id
-int supplierId;
+	@GeneratedValue
 	
-	String supplierName,supplierAddress;
+	int supId;
+	
+	String supName,supDesc, supAddress;
 
-	public int getSupplierId() {
-		return supplierId;
+	public int getsupId() {
+		return supId;
 	}
 
-	public void setSupplierId(int supplierId) {
-		this.supplierId = supplierId;
+	public void setsupId(int supId) {
+		this.supId = supId;
 	}
 
-	public String getSupplierName() {
-		return supplierName;
+	public String getsupName() {
+		return supName;
 	}
 
-	public void setSupplierName(String supplierName) {
-		this.supplierName = supplierName;
+	public void setsupName(String supName) {
+		this.supName = supName;
 	}
 
-	public String getSupplierAddress() {
-		return supplierAddress;
+	public String getsupDesc() {
+		return supDesc;
 	}
 
-	public void setSupplierAddress(String supplierAddress) {
-		this.supplierAddress = supplierAddress;
+	public void setsupDesc(String supDesc) {
+		this.supDesc = supDesc;
 	}
-	
-	
-	
-	
-	
+
+	public String getsupAddress() {
+		return supAddress;
+	}
+
+	public void setSupAddress(String supAddress) {
+		this.supAddress = supAddress;
+	}
 }

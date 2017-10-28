@@ -1,7 +1,9 @@
 package com.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 
 @Entity
@@ -9,9 +11,22 @@ import javax.persistence.Table;
 public class Product
 {
 @Id
+@GeneratedValue
 int productId;
 String productName,productDesc;
-int stock,price,catId,supplierId;
+int stock,price,catId,supId;
+
+@Lob
+private byte[] image;
+
+public byte[] getImage()
+{
+	return image;
+}
+public void setImage(byte[] image)
+{
+	this.image = image;
+}
 
 
 
@@ -62,14 +77,15 @@ public void setCatId(int catId)
 {
 	this.catId = catId;
 }
-public int getSupplierId()
+public int getsupId()
 {
-	return supplierId;
+	return supId;
 }
-public void setSupplierId(int supplierId)
+public void setsupId(int supId)
 {
-	this.supplierId = supplierId;
+	this.supId = supId;
 }
+
 
 
 

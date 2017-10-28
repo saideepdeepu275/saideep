@@ -3,6 +3,7 @@ package com.DaoImpl;
 
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,30 +19,40 @@ public class ProductDaoImpl implements ProductDao
 	@Autowired
     SessionFactory sessionFactory;
 
+	@Transactional
 	public boolean addProduct(Product product) {
 		
 		 try
 	      {
-	      sessionFactory.getCurrentSession().save(product);
+	    //  sessionFactory.getCurrentSession().save(product);
+			 Session session=sessionFactory.getCurrentSession();
+			    session.saveOrUpdate(product);
+			    System.out.println("saved product");
 	      return true;
 	      }
 	      catch(Exception e)
 	      {
+	    	  System.out.println(e.getMessage());
 	      return false;
 	      }
 	}
 
+	@Transactional
 	public List<Product> retrieveProduct() {
-		// TODO Auto-generated method stub
-		return null;
+		 Session session=sessionFactory.openSession();
+	        Query query=session.createQuery("from Product");
+	        List<Product> listProducts=query.list();
+	        session.close();
+	        return listProducts;
 	}
-
+@Transactional
 	public boolean deleteProduct(Product product) {
 		// TODO Auto-generated method stub
 		 try
 	     {
-	     sessionFactory.getCurrentSession().delete(product);
-	     return true;
+			 Session session=sessionFactory.getCurrentSession();
+			    session.delete(product);
+			    return true;
 	     }
 	     catch(Exception e)
 	     {
@@ -50,6 +61,7 @@ public class ProductDaoImpl implements ProductDao
 	     }
 	}
 
+	@Transactional
 	public Product getProduct(int productId) {
 		// TODO Auto-generated method stubSession session=sessionFactory.openSession();
 		 Session session=sessionFactory.openSession();
@@ -57,9 +69,9 @@ public class ProductDaoImpl implements ProductDao
 	     session.close();
 	     return product;
 	}
-
+@Transactional
 	public boolean updateProduct(Product product) {
-		// TODO Auto-generated method stub
+		
 		try
 	     {
 	     sessionFactory.getCurrentSession().saveOrUpdate(product);
@@ -71,6 +83,15 @@ public class ProductDaoImpl implements ProductDao
 	     return false;
 	     }
 	}
+@Transactional
+public Product getItem(int id) {
+	// TODO Auto-generated method stub
+	Product product=sessionFactory.getCurrentSession().get(Product.class,id);  
+	return product;
+}
+
+	
+	
 	}
 	
 	
