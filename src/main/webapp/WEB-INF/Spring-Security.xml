@@ -18,7 +18,7 @@ http://www.springframework.org/schema/security/spring-security.xsd">
 
 		<security:http auto-config="true" use-expressions="true">
 		
-		<!-- <security:intercept-url pattern="/Product/**" access="hasRole('ROLE_ADMIN')" />
+		 <security:intercept-url pattern="/Product/**" access="hasRole('ROLE_ADMIN')" />
 		<security:intercept-url pattern="/insertProduct/**" access="hasRole('ROLE_ADMIN')" />
 		<security:intercept-url pattern="/deleteProduct/**" access="hasRole('ROLE_ADMIN')" />
 		<security:intercept-url pattern="/updateProduct/**" access="hasRole('ROLE_ADMIN')" />
@@ -37,8 +37,8 @@ http://www.springframework.org/schema/security/spring-security.xsd">
 		<security:intercept-url pattern="/editorder/**" access="hasRole('ROLE_USER')" />
 		<security:intercept-url pattern="/deleteitem/**" access="hasRole('ROLE_USER')" />
 		<security:intercept-url pattern="/Payment/**" access="hasRole('ROLE_USER')" />
-		<security:intercept-url pattern="/placeorder/**" access="hasRole('ROLE_USER')" />//
-		 -->
+		<security:intercept-url pattern="/placeorder/**" access="hasRole('ROLE_USER')" />
+
 
 <security:intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/>
 

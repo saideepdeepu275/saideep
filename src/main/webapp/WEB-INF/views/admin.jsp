@@ -22,6 +22,7 @@ background-color:grey;
 <jsp:include page="header.jsp"></jsp:include>
 <%--<%@include=file="header.jsp"%> --%>
 <jsp:include page="footer.jsp"></jsp:include>
+
 <body>
 <div class="Container">.
 <h2><Strong>Mostly Viewed</Strong></h2>

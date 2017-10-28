@@ -89,7 +89,7 @@ public class HomeController {
 			     }
 		}
 			
-			return "/welcome";
+			return "/Welcome";
 		
 		}
 	    

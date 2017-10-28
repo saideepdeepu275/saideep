@@ -1,3 +1,4 @@
+
 package controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -7,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.Dao.ProductDao;
 import com.Dao.UserDao;
 import com.model.User;
 
@@ -18,12 +20,24 @@ public class indexController
 	@Autowired
 	private UserDao userDao;
 	
+	
+	@Autowired
+	private ProductDao productDao;
+	
+	
 @RequestMapping("/")
 public String index()
 {
 	return "Welcome";
 }
 
+@RequestMapping(value="/",method=RequestMethod.GET)
+public String showIndex(Model model) 
+{
+	model.addAttribute("pList",productDao.retrieveProduct());
+	return "Welcome";
+
+}
 
 @RequestMapping("/registration")
 public String goToRegisterPage(@ModelAttribute("user") User user,Model model)
