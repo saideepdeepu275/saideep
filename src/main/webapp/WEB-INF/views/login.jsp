@@ -34,7 +34,7 @@ background:#233e44;
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
-<body>
+<body><body   background="${pageContext.request.contextPath}/resources/grreen.jpg"   style="width:100%" "height="20%">
 <div class="bs-example">
     <nav id="myNavbar" class="navbar navbar-inverse" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->

@@ -14,7 +14,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>cars </title>
 </head>
-<body>
+<body><body   background="${pageContext.request.contextPath}/resources/REDIAMGE.JPG"   style="width:100%" "height="20%">
+
 <nav id="navbar-blue" class="navbar navbar-static-top" role="navigation">
 <div class="container">
 		<ul class="nav navbar-nav">

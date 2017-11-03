@@ -18,7 +18,8 @@
 <html>
     <head>
     </head>
-    <body>
+    <body><body   background="${pageContext.request.contextPath}/resources/REDIAMGE.JPG"   style="width:100%" "height="20%">
+    
         <h3>Welcome, Enter The User Details</h3>
         <form:form method="POST" action="saveUser" modelAttribute="user">
              <table>
