@@ -44,10 +44,12 @@ import com.model.Supplier;
 		{
 			System.out.println("show product");
 		//	Product p=new Product();
-			//m.addAttribute(product);
-			m.addAttribute("productList",productDao.retrieveProduct());
+			m.addAttribute(product);
+		//	m.addAttribute("productList",productDao.retrieveProduct());
 			m.addAttribute("categoryList",this.getCategories());
 			m.addAttribute("supplierList", this.getSuppliers());
+			List<Product> listProducts=productDao.retrieveProduct();
+			m.addAttribute("productList",listProducts);
 			
 			return "Product";
 		}
@@ -88,7 +90,7 @@ import com.model.Supplier;
 			System.out.println("add product");
 			p.setImage(file.getBytes());
 			System.out.println("set bytes");
-			productDao.addProduct(p);
+			this.productDao.addProduct(p);
 			System.out.println("Added product");
 			return "redirect:/product";
 			
@@ -98,20 +100,31 @@ import com.model.Supplier;
 		
 		
 		@RequestMapping(value="updateProduct/{productId}",method=RequestMethod.GET)
-		public String editProduct(@PathVariable("productId") int productId,RedirectAttributes attributes)
-		{Product p = productDao.getProduct(productId);
-		productDao.updateProduct(p);
-			attributes.addFlashAttribute("product", this.productDao.getProduct(productId));
-			return "redirect:/product";
+		public String updateProduct(@PathVariable("productId") int productId,RedirectAttributes attributes,Model m)
+		{//Product p = productDao.getProduct(productId);
+		//productDao.updateProduct(p);
+		//	attributes.addFlashAttribute("product", this.productDao.getProduct(productId));
+			//return "redirect:/product";
+			
+			 
+	        attributes.addFlashAttribute("product", this.productDao.getProduct(productId));
+	    	return "redirect:/product";
 		   }
 		
 		@RequestMapping(value="deleteProduct/{productId}",method=RequestMethod.GET)
-		public String removeProduct(@PathVariable("productId") int productId,RedirectAttributes attributes)
+		public String deleteProduct(@PathVariable("productId") int productId,RedirectAttributes attributes,Model m)
 		{
-			Product p = productDao.getProduct(productId);
-			productDao.deleteProduct(p);
-			attributes.addFlashAttribute("DeleteMessage", "Product has been deleted Successfully");
-			return "redirect:/product";
+			//Product p = productDao.getProduct(productId);
+			//productDao.deleteProduct(p);
+			//attributes.addFlashAttribute("DeleteMessage", "Product has been deleted Successfully");
+			//return "redirect:/product";
+			
+			
+			
+m.addAttribute("product", productDao.deleteProduct(productId));
+	    	
+	    	return "redirect:/product";
+			
 		   }
 
 

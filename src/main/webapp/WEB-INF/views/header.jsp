@@ -15,7 +15,7 @@
 <title>cars </title>
 </head>
 <body>
-<nav id="navbar-blue" class="navbar-inverse navbar-static-top" role="navigation" background-color="RED">
+<nav id="navbar-blue" class="navbar navbar-static-top" role="navigation">
 <div class="container">
 		<ul class="nav navbar-nav">
 			<button type="button"class="nabar-toggle collapse" data-toggle="collapse" data-target="#bs-example-nav">
@@ -29,12 +29,14 @@
 </div>
 <div class="collapse navbar-collapse" id="bs-example-nav">
     <ul class="nav navbar-nav">
-		<li><a href="home"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+		<li><a href="http://localhost:8080/carsfrontend"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
 		<li><a href="registration">Register</a></li>
 		<li><a href="login"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a></li>
 		
 			<li><a href="category">Category</a></li>
 				<li><a href="product">Product</a></li>
+					<li><a href="Cart">Cart</a></li>
+	
 				<li><a href="supplier">Supplier</a></li>
 				  <sec:authorize access="isAuthenticated()">
                  <li><a href="<c:url value="j_spring_security_logout"/>">Logout</a></li>

@@ -25,11 +25,11 @@ public class indexController
 	private ProductDao productDao;
 	
 	
-@RequestMapping("/")
+/*@RequestMapping("/")
 public String index()
 {
 	return "Welcome";
-}
+}*/
 
 @RequestMapping(value="/",method=RequestMethod.GET)
 public String showIndex(Model model) 

@@ -76,6 +76,7 @@
 			<td>
 			
 				<a href="<c:url value="deleteSupplier/${supplier.supId}"/>">DELETE</a>
+				<span class="glyphicon glyphicon-delete"></span> DELETE
 				<a href="<c:url value="updateSupplier/${supplier.supId}"/>">UPDATE</a>
 			</td>
 		</tr>

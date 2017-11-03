@@ -4,9 +4,13 @@
 <html>
 <head>
 <style type="text/css">
+
+.bs-example{
+    	margin: 40px;
+    }
 .img-rounded
 {
-background-color:grey;
+background-color:RED;
 }
 </style>
 <title>CarsHub</title>
@@ -17,11 +21,64 @@ background-color:grey;
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>CARS NEW DESIGN</title>
 </head>
-<jsp:include page="header.jsp"></jsp:include>
-<%--<%@include=file="header.jsp"%> --%>
+
 <jsp:include page="footer.jsp"></jsp:include>
+
+<body><body   background="${pageContext.request.contextPath}/resources/REDIAMGE.JPG"   style="width:100%" "height="20%">
+
+<div class="bs-example">
+    <nav id="myNavbar" class="navbar navbar-inverse" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">CARSFRONTEND</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="http://localhost:8080/carsfrontend">Home</a></li>
+                    
+                   
+                   
+                </ul>
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">admin <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="category">CATEGORY MODULE</a></li>
+                            <li><a href="supplier">SUPPLIER MODULE</a></li>
+                            <li><a href="product">PRODUCT MODULE</a></li>
+                             <li><a href="Cart">Cart</a></li>
+                            <li class="divider"></li>
+                         
+                         
+                              <li> <a href="<c:url value="j_spring_security_logout" />">Logout</a></li>
+                            
+                           
+                            
+                        </ul>
+                    </li>
+                </ul>6
+                
+                 <ul class="nav navbar-nav">
+                    
+                    <li><a href="viewcart">CARTPAGE</a></li>
+               </ul> 
+            </div>
+        </div>
+    </nav>
+</div>
+
+
 
 <body>
 <div class="Container">.

@@ -21,10 +21,19 @@
     width: 100%;
 }
 </style>
+
+
+
+
+
+
+
+
+
   <footer>
   <div class="navbar navbar-default navbar-fixed-bottom" id="footer">
     <div class="container">
-      <p>© copy rights Company 2017
+      <p>Â© copy rights Company 2017
           <div align="center" cellspacing="8">
        <a href="https://www.twitter.com" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-thumbs-up" style="color: black"></span>Twitter

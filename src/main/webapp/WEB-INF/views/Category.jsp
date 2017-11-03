@@ -45,7 +45,7 @@
 	</form:form>
 
 <table cellspacing="2" align="center">
-	<tr bgcolor="gray">
+	<tr bgcolor="RED">
 		<td>Category ID</td>
 		<td>Category Name</td>
 		<td>Category Description</td>
@@ -53,7 +53,7 @@
 	</tr>
 	
 	<c:forEach items="${categoryList}" var="category">
-		<tr bgcolor="cyan">
+		<tr bgcolor="RED">
 			<td>${category.catId}</td>
 			<td>${category.catName}</td>
 			<td>${category.catDesc}</td>

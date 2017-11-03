@@ -13,7 +13,7 @@
 			<title>Registration Page</title>
 	</head>
 	<body>
-			<jsp:include page="header.jsp"></jsp:include>
+			
 		<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
     <head>
