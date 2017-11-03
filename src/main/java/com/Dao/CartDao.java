@@ -20,7 +20,7 @@ public interface CartDao {
 	public Cart editCartById(int cart_id);
 	public Cart getCartById(int cart_id);
 	
-
+	public List<Cart>listCartbyUserId(int userId);
 
 
 }

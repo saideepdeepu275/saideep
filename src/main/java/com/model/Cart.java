@@ -7,7 +7,15 @@ public class Cart {
 	@GeneratedValue
 	@Id
 	int cartId;
-	private int productId,userId,subTotal,price,productQuantity;
+	String status; 
+	private double subTotal;
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	private int productId,userId,price,productQuantity;
 	public int getCartId() {
 		return cartId;
 	}
@@ -26,12 +34,7 @@ public class Cart {
 	public void setUserId(int userId) {
 		this.userId = userId;
 	}
-	public int getSubTotal() {
-		return subTotal;
-	}
-	public void setSubTotal(int subTotal) {
-		this.subTotal = subTotal;
-	}
+	
 	public int getPrice() {
 		return price;
 	}
@@ -49,6 +52,12 @@ public class Cart {
 	}
 	public void setProductName(String productName) {
 		this.productName = productName;
+	}
+	public double getSubTotal() {
+		return subTotal;
+	}
+	public void setSubTotal(double subTotal) {
+		this.subTotal = subTotal;
 	}
 	String productName;
 

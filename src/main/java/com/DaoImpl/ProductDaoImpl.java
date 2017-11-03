@@ -89,6 +89,14 @@ public Product getItem(int id) {
 	Product product=sessionFactory.getCurrentSession().get(Product.class,id);  
 	return product;
 }
+@Transactional
+public Product deleteProduct(int productId) {
+	Product ProductToDelete = new Product();
+	ProductToDelete.setProductId(productId);
+	sessionFactory.getCurrentSession().delete(ProductToDelete);
+	return ProductToDelete;
+
+}
 
 	
 	
