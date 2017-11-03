@@ -20,7 +20,6 @@
     	margin: 20px;
     }
 </style>
-<%-- <jsp:include page="showProduct.jsp" /> --%> 
 
 </head>
 <body><body   background="${pageContext.request.contextPath}/resources/REDIAMGE.JPG"   style="width:100%" "height="20%">

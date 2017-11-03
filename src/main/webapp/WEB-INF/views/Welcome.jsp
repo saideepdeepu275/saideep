@@ -313,7 +313,7 @@ footer a,footer a:hover{
                     </table>
                 </div>
                 <form:form action="addToCart/${product.productId}" method="POST">
-                <button class="btn btn-default" type="Submit">Add to cart</button>
+                <button class="btn btn-default" type="submit">Add to cart</button>
                 </form:form>
                         </a>   
                         
