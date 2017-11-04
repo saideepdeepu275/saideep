@@ -74,7 +74,7 @@ background-color:RED;
                             <li><a href="supplier">SUPPLIER MODULE</a></li>
                             <li><a href="product">PRODUCT MODULE</a></li>
                     
-                    <li><a href="viewcart">CARTPAGE</a></li>
+                
                </ul> 
             </div>
         </div>

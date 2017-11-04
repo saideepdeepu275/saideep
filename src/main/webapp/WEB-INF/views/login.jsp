@@ -46,12 +46,12 @@ background:#233e44;
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">IPHONE</a>
+                <a class="navbar-brand" href="#">cars</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="loggedin"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+                   
                    
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
