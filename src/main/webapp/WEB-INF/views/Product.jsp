@@ -6,7 +6,7 @@
 <html>
     <head>
     </head>
-    <body>
+    <body><body   background="${pageContext.request.contextPath}/resources/REDIAMGE.JPG"   style="width:100%" "height="20%">
         <h3>Welcome, Enter The Product Details</h3>
         <form:form method="POST" action="InsertProduct" modelAttribute="product" enctype="multipart/form-data" >
              <table>

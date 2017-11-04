@@ -70,6 +70,9 @@ background-color:RED;
                 </ul>6
                 
                  <ul class="nav navbar-nav">
+                  <li><a href="category">CATEGORY MODULE</a></li>
+                            <li><a href="supplier">SUPPLIER MODULE</a></li>
+                            <li><a href="product">PRODUCT MODULE</a></li>
                     
                     <li><a href="viewcart">CARTPAGE</a></li>
                </ul> 
@@ -118,5 +121,6 @@ background-color:RED;
 </a>
 
 </div>
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
