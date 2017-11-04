@@ -1,5 +1,11 @@
 package com.hibernateConfig;
 import javax.sql.DataSource;
+
+import com.Dao.AddressDao;
+import com.Dao.CartDao;
+import com.Dao.CategoryDao;
+import com.Dao.ProductDao;
+import com.Dao.SupplierDao;
 import com.Dao.UserDao;  
 import com.DaoImpl.*;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
@@ -67,5 +73,45 @@ public class DataBaseConfig
 		{
 
 			return new UserDaoImpl(sessionFactory);
+		}
+		
+		
+		
+		@Autowired
+		@Bean(name="categoryDao")
+		public CategoryDao getCategory(SessionFactory sessionFactory)
+		{
+			return new CategoryDaoImpl(sessionFactory);
+			
+		}
+		
+		@Autowired
+		@Bean(name="supplierDao")
+		public SupplierDao getSupplier(SessionFactory sessionFactory)
+		{
+			return new SupplierDaoImpl(sessionFactory);
+			
+		}
+		
+		@Autowired
+		@Bean(name="productDao")
+		public ProductDao getProduct(SessionFactory sessionFactory){
+			return new ProductDaoImpl(sessionFactory);
+		}
+		
+		@Autowired
+		@Bean(name = "cartDao")
+		public CartDao getCartDAO(SessionFactory sessionFactory)
+		{
+
+			return new CartDaoImpl(sessionFactory);
+		}
+		
+		@Autowired
+		@Bean(name = "addressDAO")
+		public AddressDao getAddressDao(SessionFactory sessionFactory)
+		{
+
+			return new AddressDaoImpl(sessionFactory);
 		}
 }

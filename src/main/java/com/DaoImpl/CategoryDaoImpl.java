@@ -16,9 +16,12 @@ import com.model.Category;
 @Repository("categoryDao")
 public  class CategoryDaoImpl implements CategoryDao
 {
-@Autowired
+	@Autowired
+	SessionFactory sessionFactory;
 
-SessionFactory sessionFactory;
+	public CategoryDaoImpl(SessionFactory sessionFactory) {
+		this.sessionFactory=sessionFactory;
+	}
 
 @Transactional
 public boolean addCategory(Category category) 
