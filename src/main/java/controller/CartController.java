@@ -1,5 +1,7 @@
 package controller;
 
+import java.sql.Timestamp;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,6 +56,8 @@ public class CartController {
 				item.setProductQuantity(q);
 				item.setSubTotal(q * p.getPrice());
 				item.setPrice(p.getPrice());
+				item.setCreatedBy("TEST");
+				item.setCreatedTimestamp(new Timestamp(System.currentTimeMillis()));
 				cartDao.saveProductToCart(item);
 				attributes.addFlashAttribute("SuccessMessage", "Item"+p.getProductName()+" has been deleted Successfully");
 				return "redirect:/";

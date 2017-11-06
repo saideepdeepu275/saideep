@@ -1,7 +1,6 @@
 package controller;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -53,6 +52,7 @@ public class CheckOutController {
 	
 	@Autowired
 	CategoryDao categoryDao;
+	
 	@RequestMapping(value="checkout",method = RequestMethod.GET)
 	public String showShippingPage(@ModelAttribute("address") Address address,BindingResult result, HttpSession session,Model model){
 		
@@ -167,7 +167,7 @@ public class CheckOutController {
 		
 		Payment payment = (Payment) session.getAttribute("payment");
 		
-		List<Cart> cartItemsList = CartDao.listCartbyUserId(user.getId());
+		List<Cart> cartItemsList = cartDao.listCartbyUserId(user.getId());
 				
 		double totalAmount = 0;
 		
@@ -187,7 +187,7 @@ public class CheckOutController {
 			order.setShipAddressId(address.getId());
 			order.setPaymentId(payment.getId());
 			order.setTotalAmount(totalAmount);
-			order.setCartId(cartItem.getProductId());
+			order.setProductId(cartItem.getProductId());
 			order.setProductQuantity(cartItem.getProductQuantity());
 			order.setPrice(cartItem.getPrice());
 			order.setOrderStatus("PROCESSED");	
@@ -209,7 +209,6 @@ public class CheckOutController {
 		return "redirect:showinvoice";
 	}
 	
-	
 	@RequestMapping(value="showinvoice")
 	public String showInvoiceAcknoledgement(HttpSession session,Model model){
 			
@@ -222,6 +221,7 @@ public class CheckOutController {
 			
 		    model.addAttribute("orderList", orderList);
 		    model.addAttribute("productList", productDao.retrieveProduct());
+	
 		    model.addAttribute("categoryList", categoryDao.retrieveCategory());
 		}
 		else{
@@ -236,4 +236,7 @@ public class CheckOutController {
 	public void initBinder(WebDataBinder binder) {
 	    binder.registerCustomEditor(String.class, new StringTrimmerEditor(true));
 	}
-}
+	
+	
+	
+	}
