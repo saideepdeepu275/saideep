@@ -178,7 +178,7 @@ footer a,footer a:hover{
 
 </style>
 
-	<body><body   background="${pageContext.request.contextPath}/resources/REDIAMGE.JPG"   style="width:100%" "height="20%">
+	<body><body   background="${pageContext.request.contextPath}/resources/new.jpg"   style="width:100%" "height="20%">
 	  
 	  
 	  	<nav id ="navbar-red" class="navbar-inverse"role="navigation">

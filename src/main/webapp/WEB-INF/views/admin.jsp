@@ -10,7 +10,7 @@
     }
 .img-rounded
 {
-background-color:RED;
+background-color:black;
 }
 </style>
 <title>CarsHub</title>
@@ -26,7 +26,7 @@ background-color:RED;
 
 <jsp:include page="footer.jsp"></jsp:include>
 
-<body><body   background="${pageContext.request.contextPath}/resources/REDIAMGE.JPG"   style="width:100%" "height="20%">
+<body><body   background="${pageContext.request.contextPath}/resources/gaming.jpg"   style="width:100%" "height="20%">
 
 <div class="bs-example">
     <nav id="myNavbar" class="navbar navbar-inverse" role="navigation">
