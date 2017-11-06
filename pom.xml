@@ -10,6 +10,9 @@
   <name>projectbackend</name>
   <url>http://maven.apache.org</url>
   <properties>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+ 
+  
 		<org.slf4j-version>1.7.5</org.slf4j-version>
 	</properties>
 <dependencies>
@@ -75,7 +78,8 @@
 <dependency>
 
 <groupId>commons-io</groupId>
-<artifactId>commons-io</artifactId>
+
+ <artifactId>commons-io</artifactId>
 <version>2.5</version>
 		</dependency>
 		<dependency>

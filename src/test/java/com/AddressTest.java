@@ -11,7 +11,8 @@ import org.springframework.context.annotation.ComponentScan;
 import com.Dao.AddressDao;
 import com.model.Address;
 
-	public class AddressTest {
+
+public class AddressTest {
 		@Autowired
 		private static Address address;
 		
@@ -23,7 +24,7 @@ import com.model.Address;
 		public static void initialize(){
 			
 			AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-			context.scan("com.yourstyle.*");
+			context.scan("com");
 			context.refresh();
 			
 			addressDao = (AddressDao) context.getBean("addressDao");
@@ -43,8 +44,9 @@ import com.model.Address;
 			address.setState("Telangana");
 			address.setPincode("500072");
 			address.setEmail("rupamudra@gmail.com");
-			address.setPhone("264533290");
-			address.setPersonId(65);
+			address.setPhone("2645332909");
+			address.setPersonId(1);
+			address.setAddressType("HOME");
 			address.setCreatedBy("TEST");
 			address.setCreatedTimestamp(new Timestamp(System.currentTimeMillis()));
 			

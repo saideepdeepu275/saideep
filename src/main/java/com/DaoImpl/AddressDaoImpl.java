@@ -13,11 +13,13 @@ import org.slf4j.LoggerFactory;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.Dao.AddressDao;
 import com.model.Address;
 
+@Repository
 public class AddressDaoImpl implements AddressDao {
 private static Logger log = LoggerFactory.getLogger(AddressDaoImpl.class);
 

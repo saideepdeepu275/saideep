@@ -1,12 +1,11 @@
 package com.Dao;
+
 import java.util.List;
 
 import com.model.Orders;
 
 public interface OrderDao {
 	
-	
-
 	public boolean saveOrUpdate(Orders order);
 	
 	public Orders getOrderById(int orderId);

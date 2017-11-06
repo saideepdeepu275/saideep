@@ -1,21 +1,41 @@
 package com.model;
+
+import java.io.Serializable;
+import java.sql.Timestamp;
+
 import javax.persistence.*;
 
 
 @Entity
-public class Cart {
+public class Cart implements Serializable
+{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+
+	
 	@GeneratedValue
 	@Id
 	int cartId;
-	String status; 
+	private int productId;
+	private int userId;
 	private double subTotal;
-	public String getStatus() {
-		return status;
-	}
-	public void setStatus(String status) {
-		this.status = status;
-	}
-	private int productId,userId,price,productQuantity;
+	private int price;
+	private int productQuantity;
+	String productName;
+	
+	private Timestamp createdTimestamp;
+	
+	private String createdBy;
+	
+	private Timestamp updatedTimestamp;
+	
+	private String updatedBy;
+	
+	
 	public int getCartId() {
 		return cartId;
 	}
@@ -31,10 +51,19 @@ public class Cart {
 	public int getUserId() {
 		return userId;
 	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 	public void setUserId(int userId) {
 		this.userId = userId;
-	}
+	}	
 	
+	public double getSubTotal() {
+		return subTotal;
+	}
+	public void setSubTotal(double subTotal) {
+		this.subTotal = subTotal;
+	}
 	public int getPrice() {
 		return price;
 	}
@@ -53,14 +82,31 @@ public class Cart {
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
-	public double getSubTotal() {
-		return subTotal;
+	
+	public Timestamp getCreatedTimestamp() {
+		return createdTimestamp;
 	}
-	public void setSubTotal(double subTotal) {
-		this.subTotal = subTotal;
+	public void setCreatedTimestamp(Timestamp createdTimestamp) {
+		this.createdTimestamp = createdTimestamp;
 	}
-	String productName;
+	public String getCreatedBy() {
+		return createdBy;
+	}
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
+	}
+	public Timestamp getUpdatedTimestamp() {
+		return updatedTimestamp;
+	}
+	public void setUpdatedTimestamp(Timestamp updatedTimestamp) {
+		this.updatedTimestamp = updatedTimestamp;
+	}
+	public String getUpdatedBy() {
+		return updatedBy;
+	}
+	public void setUpdatedBy(String updatedBy) {
+		this.updatedBy = updatedBy;
+	}
 
-	
-	
+		
 }

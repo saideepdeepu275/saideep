@@ -14,12 +14,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.Dao.OrderDao;
 import com.model.Cart;
 import com.model.Orders;
 
 @Repository("orderDao")
-
-public class OrderDaoImpl {
+public class OrderDaoImpl implements OrderDao{
 private static Logger log = LoggerFactory.getLogger(OrderDaoImpl.class);
 	
 	@Autowired

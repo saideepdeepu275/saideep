@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.Dao.CartDao;
 import com.model.Cart;
 
-@Repository("cartDao")
+@Repository
 public class CartDaoImpl implements CartDao{
 	@Autowired
 	SessionFactory sessionFactory;
@@ -69,7 +69,7 @@ public class CartDaoImpl implements CartDao{
 public long cartsize(int userId) {
 	Criteria c=sessionFactory.getCurrentSession().createCriteria(Cart.class);
 	c.add(Restrictions.eq("userId", userId));
-	c.add(Restrictions.eq("status","C"));
+	//c.add(Restrictions.eq("status","C"));
 	c.setProjection(Projections.count("userId"));
 	long count= (Long) c.uniqueResult();
 	return count;
@@ -81,7 +81,7 @@ public long cartsize(int userId) {
 public double CartPrice(int userId) {
 	Criteria c=sessionFactory.getCurrentSession().createCriteria(Cart.class);
 	c.add(Restrictions.eq("userId", userId));
-	c.add(Restrictions.eq("status","C"));
+	//c.add(Restrictions.eq("status","C"));
 	c.setProjection(Projections.sum("subTotal"));
 	double l=  (Double) c.uniqueResult();
 	return l;
@@ -112,7 +112,7 @@ public Cart getCartById(int cart_id) {
 	return null;
 }
 
-
+@Transactional
 public List<Cart> listCartbyUserId(int userId) {
 	String hql = "from"+" Cart"+" where userId=" + userId;
 

@@ -101,14 +101,14 @@ public class DataBaseConfig
 		
 		@Autowired
 		@Bean(name = "cartDao")
-		public CartDao getCartDAO(SessionFactory sessionFactory)
+		public CartDao getCartDao(SessionFactory sessionFactory)
 		{
 
 			return new CartDaoImpl(sessionFactory);
 		}
 		
 		@Autowired
-		@Bean(name = "addressDAO")
+		@Bean(name = "addressDao")
 		public AddressDao getAddressDao(SessionFactory sessionFactory)
 		{
 
