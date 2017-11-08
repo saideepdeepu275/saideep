@@ -22,7 +22,7 @@
 </style>
 
 </head>
-<body><body   background="${pageContext.request.contextPath}/resources/REDIAMGE.JPG"   style="width:100%" "height="20%">
+<body><body   background="${pageContext.request.contextPath}/resources/game.jpg"   style="width:100%" "height="20%">
 
 <div class="bs-example">
     <nav id="myNavbar" class="navbar navbar-inverse" role="navigation">
@@ -56,6 +56,7 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
+                    <table class="table table-striped table-bordered" style="width:100%">
                         <th>Product</th>
                         <th>Quantity</th>
                         		
@@ -94,9 +95,9 @@
                         
                         </td>
                           </tr>
-                          <c:set var = "b" scope = "session" value = "${b=b+cart.subTotal}"/>
+                     <!--      <c:set var = "b" scope = "session" value = "${b=b+cart.subTotal}"/> --> 
                     </c:forEach>   
-                          
+                     <!--    
                     <tr>
                         <td>   </td>
                         <td>   </td>
@@ -116,14 +117,42 @@
                         <td>   </td>
                         <td>   </td>
                         <td><h3>Total</h3></td>
-                        <c:set var = "a" scope = "session" value = "${b+6.94}"/>
+                      <c:set var = "a" scope = "session" value = "${b+6.94}"/>
                         <td class="text-right"><h3><strong>${a}</strong></h3></td>
                     </tr>
                     <tr>
                         <td>   </td>
                         <td>   </td>
                         <td>   </td>
+                        <td>-->   
+                         <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h5></h5></td>
+                        <td class="text-right"><h5><strong>${cart.subTotal}</strong></h5></td>
+                    </tr>
+                    <!--  <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h5>Estimated shipping</h5></td>
+                        <td class="text-right"><h5><strong>$6.94</strong></h5></td>
+                    </tr>-->
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h3>Total</h3></td>
+                        <td class="text-right"><h3><strong>${CartPrice}</strong></h3></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
                         <td>
+                        
+                        
                         <a href="continue_shopping" class="btn btn-default">
                             <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
                        </a>

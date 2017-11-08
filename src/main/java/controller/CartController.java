@@ -44,6 +44,8 @@ public class CartController {
 				item.setPrice(p.getPrice());
 				item.setSubTotal(item.getProductQuantity() *p.getPrice());
 				cartDao.saveProductToCart(item);
+				item.setCreatedBy("TEST");
+				item.setCreatedTimestamp(new Timestamp(System.currentTimeMillis()));
 				attributes.addFlashAttribute("ExistingMessage",  p.getProductName() +"is already exist");
 		
 				return "redirect:/";

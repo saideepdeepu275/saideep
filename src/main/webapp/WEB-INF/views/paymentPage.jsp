@@ -25,8 +25,10 @@ $( document ).ready(function() {
 });
 </script>
 </head>
+<jsp:include page="footer.jsp"></jsp:include>
 
-<body>
+<body><body   background="${pageContext.request.contextPath}/resources/gaming.jpg"   style="width:100%" "height="20%">
+
 <div id="wrap">
 <div id="main" class="container clear-top">
 

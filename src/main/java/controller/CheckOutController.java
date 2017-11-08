@@ -1,6 +1,8 @@
+
 package controller;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -105,7 +107,7 @@ public class CheckOutController {
 		User user = (User) session.getAttribute("user");
 		Address address = (Address) session.getAttribute("address");
 		model.addAttribute("address", address);
-		//model.addAttribute("paymentList", paymentDao.getUserCardPaymentInfo(user.getId()));
+		model.addAttribute("paymentList", paymentDao.getUserCardPaymentInfo(user.getId()));
 		model.addAttribute("cartTotalAmount", cartDao.CartPrice(user.getId()));
 		
 		return "paymentPage";
@@ -133,7 +135,6 @@ public class CheckOutController {
 		payment.setUserId(user.getId());
 		payment.setTotalAmount(totalAmount);
 		paymentDao.savePaymentInfo(payment);
-		
 		session.setAttribute("payment", payment);
 		attributes.addFlashAttribute("payment", payment);
 		attributes.addFlashAttribute("paymentChoice", paymentChoice);
@@ -183,9 +184,13 @@ public class CheckOutController {
 			Orders order=new Orders();
 			String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 			order.setOrderId(timeStamp);
+			System.out.println("timestamp");
 			order.setUserId(user.getId());
+			System.out.println("getid");
 			order.setShipAddressId(address.getId());
+			System.out.println("getid2");
 			order.setPaymentId(payment.getId());
+			System.out.println("timestamp payment");
 			order.setTotalAmount(totalAmount);
 			order.setProductId(cartItem.getProductId());
 			order.setProductQuantity(cartItem.getProductQuantity());
@@ -195,7 +200,7 @@ public class CheckOutController {
 			order.setCreatedBy("SYSTEM");
 			
 			
-			orderDao.saveOrUpdate(order);
+			orderDao.saveOrUpdate( order);
 						
 			Product product = productDao.getProduct(cartItem.getProductId());
 			int quantityRemaining = product.getStock() - cartItem.getProductQuantity();
@@ -206,7 +211,7 @@ public class CheckOutController {
 			cartDao.removeCartById(cartItem.getCartId());
 		}
 		
-		return "redirect:showinvoice";
+		return "redirect:/showinvoice";
 	}
 	
 	@RequestMapping(value="showinvoice")
@@ -217,11 +222,15 @@ public class CheckOutController {
 			User user = (User) session.getAttribute("user");
 			
 			List<Orders> orderList = orderDao.getAllOrdersOfUser(user.getId());
+			List<Cart> cartList = new ArrayList<Cart>();
 			
+			for(Orders order:orderList){
+				
+				cartList.add(cartDao.getCartById(order.getCartId()));
+			}
 			
-		    model.addAttribute("orderList", orderList);
+		    model.addAttribute("cartList", cartList);
 		    model.addAttribute("productList", productDao.retrieveProduct());
-	
 		    model.addAttribute("categoryList", categoryDao.retrieveCategory());
 		}
 		else{

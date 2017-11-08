@@ -22,6 +22,8 @@
 </style>
 
 </head>
+<body   background="${pageContext.request.contextPath}/resources/gaming.jpg"   style="width:100%" "height="20%">
+
 <nav id ="navbar-red" class="navbar-inverse"role="navigation">
 			
 			<div class="container-fluid">

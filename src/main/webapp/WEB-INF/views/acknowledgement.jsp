@@ -15,7 +15,10 @@
 <title>Acknowledgement</title>
 </head>
 
-<body>
+<body>><body   background="${pageContext.request.contextPath}/resources/gaming.jpg"   style="width:100%" "height="20%">
+
+
+	
 <div id="wrap">
 <div id="main" class="container clear-top">
 
@@ -31,7 +34,9 @@
 	</c:if>
 	
 		<thead>
+		<table class="table table-striped table-bordered" style="width:100%">
 			<tr>
+			
 			<th>Product</th>
 			<th>Expected Delivery</th>
 			<th>Quantity</th>
@@ -49,7 +54,7 @@
 					
 			<div class="media-body">
 			<c:forEach items="${productList}" var="product">	
-				<c:if test="${product.productId == order.productId}">
+				<c:if test="${product.productId ==order.productId}">
 			<h4 class="media-heading"><a href="">${product.productName}</a></h4>
                                 <h5 class="media-heading"></h5>
                                 <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>

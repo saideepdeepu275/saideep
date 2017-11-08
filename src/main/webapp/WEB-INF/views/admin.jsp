@@ -105,7 +105,7 @@ background-color:black;
    <img class="img-rounded" class="img-responsive center-block" src="resources/awesome-red-car-2.jpg" style="width="100%" height="30%"">
    </div>
    <div class="item">
-   <img class="img-rounded" class="img-responsive center-block"src="resources/car1.jpg" style="width="100%" height="30%"" >
+   <img class="img-rounded" class="img-responsive center-block"src="resources/i4.jpg.jpg" style="width="100%" height="30%"" >
    </div>
   
   </div>

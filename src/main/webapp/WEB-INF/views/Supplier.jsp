@@ -5,9 +5,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>supplier</title>
+<title>SUPPLIERPAGE</title>
 </head>
-	<body ><body   background="${pageContext.request.contextPath}/resources/REDIAMGE.JPG"   style="width:100%" "height="20%">
+<jsp:include page="footer.jsp"></jsp:include>
+	<body ><body   background="${pageContext.request.contextPath}/resources/gaming.jpg"   style="width:100%" "height="20%">
+
 	
 
 	   	<!-- <form action="AddSupplier" method="post">-->
@@ -61,6 +63,7 @@
 
 <table cellspacing="2" align="center">
 	<tr bgcolor="violet">
+	<table class="table table-striped table-bordered" style="width:100%">
 		<td>Supplier ID</td>
 		<td>Supplier Name</td>
 		<td>Supplier Description</td>

@@ -5,8 +5,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
     <head>
-    </head>
-    <body><body   background="${pageContext.request.contextPath}/resources/REDIAMGE.JPG"   style="width:100%" "height="20%">
+    <title>PRODUCTPAGE</title>
+    </head><jsp:include page="footer.jsp"></jsp:include>
+    <body><body   background="${pageContext.request.contextPath}/resources/gaming.jpg"   style="width:100%" "height="20%">
+
         <h3>Welcome, Enter The Product Details</h3>
         <form:form method="POST" action="InsertProduct" modelAttribute="product" enctype="multipart/form-data" >
              <table>
@@ -70,6 +72,7 @@
 			<caption>Products</caption>
 			<thead>
 				<tr >
+				<table class="table table-striped table-bordered" style="width:100%">
 					<th>Product Id</th>
 					<th>Product Name</th>
 					<th>Product Description</th>

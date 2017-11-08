@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>UPDATESUPPLIER</title>
 </head>
-<body><body   background="${pageContext.request.contextPath}/resources/REDIAMGE.JPG"   style="width:100%" "height="20%">
+<body><body   background="${pageContext.request.contextPath}/resources/gaming.jpg"   style="width:100%" "height="20%">
 <form:form action="${pageContext.request.contextPath}/editSupplier" modelAttribute="Supplier" method="post">
 			
 			<table align="center" cellspacing="2">

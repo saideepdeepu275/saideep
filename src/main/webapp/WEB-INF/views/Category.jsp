@@ -6,12 +6,16 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<title>Insert title here</title>
+		<title>CATEGORYPAGE</title>
 		
 		
 		
 	</head>
-<body><body   background="${pageContext.request.contextPath}/resources/REDIAMGE.JPG"   style="width:100%" "height="20%">
+	
+
+	<jsp:include page="footer.jsp"></jsp:include>
+<body><body   background="${pageContext.request.contextPath}/resources/gaming.jpg"   style="width:100%" "height="20%">
+
 
 		<!-- <form action="AddCategory" method="post">-->
 
@@ -49,6 +53,7 @@
 
 <table cellspacing="2" align="center">
 	<tr bgcolor="RED">
+	<table class="table table-striped table-bordered" style="width:100%">
 		<td>Category ID</td>
 		<td>Category Name</td>
 		<td>Category Description</td>
@@ -56,7 +61,7 @@
 	</tr>
 	
 	<c:forEach items="${categoryList}" var="category">
-		<tr bgcolor="RED">
+		<tr bgcolor="BLUE">
 			<td>${category.catId}</td>
 			<td>${category.catName}</td>
 			<td>${category.catDesc}</td>

@@ -15,7 +15,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>Order Summary</title>
 </head>
-<body>
+<body><body   background="${pageContext.request.contextPath}/resources/gaming.jpg"   style="width:100%" "height="20%">
+
 <div id="wrap">
 <div id="main" class="container clear-top">
 <div class = "row">
