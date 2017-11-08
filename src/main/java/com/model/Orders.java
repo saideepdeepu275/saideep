@@ -12,11 +12,8 @@ import org.springframework.stereotype.Component;
 
 public class Orders {
 
-	@Id
-	@GeneratedValue
-	
-	
-private String orderId;
+	@Id	
+	private String orderId;
 	
 	private int userId;
 	

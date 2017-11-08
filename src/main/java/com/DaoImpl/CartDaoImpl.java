@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.Dao.CartDao;
 import com.model.Cart;
 
-@Repository
+@Repository("cartDao")
 public class CartDaoImpl implements CartDao{
 	@Autowired
 	SessionFactory sessionFactory;
